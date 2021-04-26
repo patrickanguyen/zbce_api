@@ -5,8 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 
 # load environment variables
-dotenv_path = Path("./.env") # use absolute path with LAMP server implementation, change to relative path when testing w/ a Flask development server
-load_dotenv(dotenv_path=dotenv_path)
+load_dotenv()
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
